@@ -1,5 +1,5 @@
 <div class="col-md-12 my-div-shadow">
-    <a href="#">
+    <a [routerLink]="['/cars', car.id]">
         <img [src]="car.logo" class="img-responsive" style="width:100%" alt="car-image">
     </a>
     <h6><b>{{car.getBrandModel()}}</b></h6>

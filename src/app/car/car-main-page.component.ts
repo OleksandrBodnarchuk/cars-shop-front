@@ -13,6 +13,7 @@ export class CarComponent implements OnInit {
   constructor(private carService: CarService) { }
 
   ngOnInit(): void {
+    console.log('CarComponent loaded');
     this.cars = this.carService.getCars();
   }
 
