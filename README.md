@@ -1,4 +1,5 @@
 # CarsShopFront
+![image](https://github.com/OleksandrBodnarchuk/cars-shop-front/assets/58620267/b08f7ea7-64a0-4436-a4d9-15e54d0aa059)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
