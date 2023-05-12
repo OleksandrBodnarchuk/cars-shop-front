@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Car } from '../car.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { CarService } from '../car.service';
 
 @Component({
@@ -16,9 +16,11 @@ export class CarItemDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('CarItemDetailsComponent loaded');
-    const carId = +this.activeRoute.snapshot.params['id']
-    this.car = this.carService.getCarById(carId);
-    console.log(this.car)
+   
+    this.activeRoute.params.subscribe((params: Params) => {
+      this.car = this.carService.getCarById(+params['id']);
+      console.log(this.car)
+    })
   }
 
   onNextSlide(currentIndex: number) {
