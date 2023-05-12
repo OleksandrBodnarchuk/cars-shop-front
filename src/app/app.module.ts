@@ -3,14 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';
+import { CarComponent } from './car/car-main-page.component';
+import { CarItemComponent } from './car/car-item/car-item.component';
+import { CarItemDetailsComponent } from './car/car-item-details/car-item-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarComponent,
+    CarItemComponent,
+    CarItemDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
