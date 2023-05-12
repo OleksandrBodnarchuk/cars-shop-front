@@ -4,17 +4,17 @@
     <div class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img [src]="carImages[slideIndex]" class="d-block w-100" alt="...">
+          <img [src]="car.imageGalery[slideIndex].imageUrl" class="d-block w-100" alt="...">
         </div>
       </div>
-      <div *ngFor="let image of carImages; let i=index">
+      <div *ngFor="let image of car.imageGalery; let i=index">
         <button class="carousel-control-prev" type="button" data-bs-slide="prev" (click)="onPreviousSlide(i)"
           *ngIf="slideIndex != 0">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-slide="next" (click)="onNextSlide(i)"
-          *ngIf="slideIndex != carImages.length-1">
+          *ngIf="slideIndex != car.imageGalery.length-1">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
